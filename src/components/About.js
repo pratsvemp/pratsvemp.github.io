@@ -62,7 +62,7 @@ export default function About() {
             {pages.map((page) => (
               <a
                 key={page}
-                href={`/#/${page.toLowerCase()}`}
+                href={`/${page.toLowerCase()}`}
                 className="text-lg font-bold text-[#654321] hover:text-[#D2691E] transition-colors"
               >
                 {page}

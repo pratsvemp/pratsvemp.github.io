@@ -46,14 +46,14 @@ function App() {
     <Router basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/#/home" element={<Home />} />
-        <Route path="/#/about" element={<About />} />
-        <Route path="/#/contact" element={<Con />} />
-        <Route path="/#/art" element={<Art />} />
-        <Route path="/#/activities" element={<Act />} />
-        <Route path="/#/activities/research" element={<Res />} />
-        <Route path="/#/activities/projects" element={<Pro />} />
-        <Route path="/#/activities/others" element={<Oth />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Con />} />
+        <Route path="/art" element={<Art />} />
+        <Route path="/activities" element={<Act />} />
+        <Route path="/activities/research" element={<Res />} />
+        <Route path="/activities/projects" element={<Pro />} />
+        <Route path="/activities/others" element={<Oth />} />
       </Routes>
     </Router>
   );
