@@ -55,27 +55,9 @@ export default function About() {
         ></motion.div>
       </motion.div>
 
-      {/* Navbar */}
-      <nav className="bg-transparent border-b border-[#654321] p-4 sticky top-0 z-50 backdrop-blur-sm">
-        <div className="max-w-6xl mx-auto flex justify-between items-center">
-          <div className="text-2xl font-bold">Pratyush Vempati</div>
-          <div className="space-x-6">
-            {pages.map((page) => (
-              <Link
-                key={page}
-                to={`/${page.toLowerCase()}`}
-                className="text-lg font-bold text-[#654321] hover:text-[#D2691E] transition-colors"
-              >
-                {page}
-              </Link>
-            ))}
-          </div>
-        </div>
-      </nav>
-
       {/* Content */}
       <motion.div
-        className="relative z-10 py-10 px-4 max-w-5xl mx-auto"
+        className="relative z-10 py-10 px-4 mt-12 max-w-5xl mx-auto"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.5 }}

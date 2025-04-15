@@ -46,27 +46,9 @@ export default function Activities() {
         />
       </motion.div>
 
-      {/* Navbar */}
-      <nav className="bg-transparent border-b border-[#654321] p-4 z-50 backdrop-blur-sm">
-        <div className="max-w-6xl mx-auto flex justify-between items-center">
-          <div className="text-2xl font-bold">Pratyush Vempati</div>
-          <div className="space-x-6">
-            {pages.map((page) => (
-              <Link
-                key={page}
-                to={`/${page.toLowerCase()}`}
-                className="text-lg font-bold text-[#654321] hover:text-[#D2691E] transition-colors"
-              >
-                {page}
-              </Link>
-            ))}
-          </div>
-        </div>
-      </nav>
-
       {/* Main Content */}
       <motion.div
-        className="relative z-10 py-12 px-6 max-w-6xl mx-auto flex-grow"
+        className="relative z-10 py-12 px-6 max-w-6xl mt-12 mx-auto flex-grow"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.5 }}

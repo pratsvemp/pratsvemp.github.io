@@ -81,34 +81,11 @@ export default function Home() {
         {/* Main Content */}
         {stage === 'content' && (
           <motion.div 
-            className="relative z-10" 
+            className="relative z-10 mt-12" 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.5 }}
           >
-            {/* Navbar */}
-            <motion.nav 
-              className="bg-transparent border-b border-[#654321] p-4 sticky top-0 z-50 backdrop-blur-sm" 
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1.5, delay: 1 }}
-            >
-              <div className="max-w-6xl mx-auto flex justify-between items-center">
-                <div className="text-2xl font-bold">Pratyush Vempati</div>
-                <div className="space-x-6">
-                  {pages.map((page) => (
-                    <Link 
-                      key={page} 
-                      to={`/${page.toLowerCase()}`} 
-                      className="text-lg font-bold text-[#654321] hover:text-[#D2691E] transition-colors"
-                    >
-                      {page}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            </motion.nav>
-
             {/* Main Content Sections */}
             <motion.section 
               className="flex items-center justify-center p-10" 

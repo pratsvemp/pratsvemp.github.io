@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router";
 import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import Home from './Home';
 import About from './About';
@@ -39,11 +40,35 @@ function useGlobalTracking() {
   }, []);
 }
 
+function Navbar() {
+  return (
+    <nav className="fixed top-0 left-0 w-full bg-transparent backdrop-blur-sm border-b border-[#654321] p-4 z-50 mb-8">
+      <div className="max-w-6xl mx-auto flex justify-between items-center">
+        <div className="text-2xl font-bold">Pratyush Vempati</div>
+        <div className="space-x-6">
+          {["Home", "About", "Activities", "Art", "Contact"].map((page) => (
+            <Link
+              key={page}
+              to={`/${page.toLowerCase()}`}
+              className="text-lg font-bold text-[#654321] hover:text-[#D2691E] transition-colors"
+            >
+              {page}
+            </Link>
+          ))}
+        </div>
+      </div>
+    </nav>
+  );
+}
+
+
 function App() {
   useGlobalTracking();
 
   return (
     <Router basename={process.env.PUBLIC_URL}>
+      <Navbar />
+      <div>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
@@ -55,6 +80,7 @@ function App() {
         <Route path="/activities/projects" element={<Pro />} />
         <Route path="/activities/others" element={<Oth />} />
       </Routes>
+      </div>
     </Router>
   );
 }
