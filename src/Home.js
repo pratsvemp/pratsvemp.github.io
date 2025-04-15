@@ -67,6 +67,7 @@ export default function Home() {
             }}
           ></motion.div>
         </motion.div>
+
         {/* White Fade Overlay */}
         {stage === 'white-fade' && (
           <motion.div 
@@ -76,6 +77,7 @@ export default function Home() {
             transition={{ duration: 1.5 }}
           />
         )}
+
         {/* Main Content */}
         {stage === 'content' && (
           <motion.div 
@@ -106,7 +108,7 @@ export default function Home() {
                 </div>
               </div>
             </motion.nav>
-            
+
             {/* Main Content Sections */}
             <motion.section 
               className="flex items-center justify-center p-10" 
@@ -128,7 +130,9 @@ export default function Home() {
                   transition={{ delay: 1.25, duration: 1 }}
                 />
               </div>
-            </motion.section>            
+            </motion.section>
+
+            {/* Content Sections with Cards */}
             <motion.div 
               className="grid grid-cols-1 md:grid-cols-2 gap-10 px-10 pb-20 max-w-5xl mx-auto"
               initial={{ opacity: 0 }}
@@ -156,8 +160,9 @@ export default function Home() {
                 </motion.div>
               ))}
             </motion.div>
+
             {/* Footer */}
-            <footer className="bg-blue-100/60  backdrop-blur-md border-t border-[#3e2e1f] py-4 sticky bottom-0 z-50">
+            <footer className="bg-blue-100/60 backdrop-blur-md border-t border-[#3e2e1f] py-4 sticky bottom-0 z-50">
               <div className="max-w-6xl mx-auto flex justify-between items-center">
                 <p className="text-sm font-medium text-[#3e2e1f] opacity-90">© 2025 Pratyush Vempati. All rights reserved.</p>
                 <div className="space-x-6">
@@ -167,8 +172,9 @@ export default function Home() {
                 </div>
               </div>
             </footer>
-        </motion.div>
-      )}
+          </motion.div>
+        )}
+      </div>
     </AnimatePresence>
   );
 }
