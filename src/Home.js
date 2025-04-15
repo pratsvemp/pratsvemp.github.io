@@ -20,10 +20,10 @@ export default function Home() {
   };
 
   const sections = [
-    { title: "My Art", description: "My photographs and 3D art.", link: "/art", image: artImg },
-    { title: "My Activities", description: "Things done and doing.", link: "/activities", image: achievementsImg },
-    { title: "About Me", description: "More about me if you're creepy.", link: "/about", image: aboutMeImg },
-    { title: "Contact me", description: "Anything under the sun.", link: "/contact", image: contactImg },
+    { title: "My Art", description: "My photographs and 3D art.", link: "/#/art", image: artImg },
+    { title: "My Activities", description: "Things done and doing.", link: "/#/activities", image: achievementsImg },
+    { title: "About Me", description: "More about me if you're creepy.", link: "/#/about", image: aboutMeImg },
+    { title: "Contact me", description: "Anything under the sun.", link: "/#/contact", image: contactImg },
   ];
 
   const pages = ["Home", "About", "Activities", "Art", "Contact"];
