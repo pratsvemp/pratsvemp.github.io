@@ -1,6 +1,7 @@
 // Research.jsx, Projects.jsx, Others.jsx
 
 import React from "react";
+import { Link } from "react-router";
 import { motion } from "framer-motion";
 import bgPic from "./activ/bgpic.jpg";
 
@@ -27,13 +28,13 @@ export default function PlaceholderPage() {
           <div className="text-2xl font-bold">Pratyush Vempati</div>
           <div className="space-x-6">
             {["Home", "About", "Activities", "Art", "Contact"].map((page) => (
-              <a
+              <Link
                 key={page}
-                href={`/${page.toLowerCase()}`}
+                to={`/${page.toLowerCase()}`}
                 className="text-lg font-bold text-[#654321] hover:text-[#D2691E] transition-colors"
               >
                 {page}
-              </a>
+              </Link>
             ))}
           </div>
         </div>

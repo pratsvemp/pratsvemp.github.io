@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router";
 import { motion } from "framer-motion";
 import bgPic from "./gallery/bgpic.jpg";
 import photo1 from "./gallery/photo1.jpg";
