@@ -1,9 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
-import bgPic from "./bgpic.jpg";
-import researchImg from "./Forbidden_line_subgraphs.svg.png";
-import projectsImg from "./prats-vemp-spacethingomgprats.jpg";
-import othersImg from "./hklophot.png";
+import bgPic from "./activ/bgpic.jpg";
+import researchImg from "./activ/Forbidden_line_subgraphs.svg.png";
+import projectsImg from "./activ/prats-vemp-spacethingomgprats.jpg";
+import othersImg from "./activ/hklophot.png";
 
 const activityPages = [
   {

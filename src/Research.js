@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import bgPic from "./bgpic.jpg";
+import bgPic from "./activ/bgpic.jpg";
 
 export default function PlaceholderPage() {
   return (

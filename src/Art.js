@@ -1,12 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
-import bgPic from "./bgpic.jpg";
-import photo1 from "./photo1.jpg";
-import photo2 from "./photo2.jpg";
-import photo3 from "./photo3.jpg";
-import d3d1 from "./3d1.jpg";
-import d3d2 from "./3d2.jpg";
-import d3d3 from "./3d3.jpg";
+import bgPic from "./gallery/bgpic.jpg";
+import photo1 from "./gallery/photo1.jpg";
+import photo2 from "./gallery/photo2.jpg";
+import photo3 from "./gallery/photo3.jpg";
+import d3d1 from "./gallery/3d1.jpg";
+import d3d2 from "./gallery/3d2.jpg";
+import d3d3 from "./gallery/3d3.jpg";
 
 const images = {
   photos: [

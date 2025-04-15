@@ -1,10 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
-import bgPic from "./bgpic.jpg";
-import about1 from "./DPS.jpg";
-import about2 from "./exun.JPG";
-import about3 from "./ioling.jpg";
-import about4 from "./iiith.jpg";
+import bgPic from "./components/bgpic.jpg";
+import about1 from "./components/DPS.jpg";
+import about2 from "./components/exun.JPG";
+import about3 from "./components/ioling.jpg";
+import about4 from "./components/iiith.jpg";
 
 const timelineItems = [
   {

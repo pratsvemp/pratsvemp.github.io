@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from './Home';
-import About from './components/About';
-import Act from './activ/Act';
-import Res from './activ/Research';
-import Pro from './activ/Projects';
-import Oth from './activ/Others';
-import Art from './gallery/Art';
+import About from './About';
+import Act from './Act';
+import Res from './Research';
+import Pro from './Projects';
+import Oth from './Others';
+import Art from './Art';
 import Con from './Contact';
 import './index.css';
 
