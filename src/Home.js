@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link } from 'react-router-dom';  // Import Link from react-router-dom
 
 // Import other images
 import aboutMeImg from "./aboutme.jpg";
@@ -94,9 +95,13 @@ export default function Home() {
                 <div className="text-2xl font-bold">Pratyush Vempati</div>
                 <div className="space-x-6">
                   {pages.map((page) => (
-                    <a key={page} href={`/${page.toLowerCase()}`} className="text-lg font-bold text-[#654321] hover:text-[#D2691E] transition-colors">
+                    <Link 
+                      key={page} 
+                      to={`/${page.toLowerCase()}`} 
+                      className="text-lg font-bold text-[#654321] hover:text-[#D2691E] transition-colors"
+                    >
                       {page}
-                    </a>
+                    </Link>
                   ))}
                 </div>
               </div>
@@ -123,51 +128,47 @@ export default function Home() {
                   transition={{ delay: 1.25, duration: 1 }}
                 />
               </div>
-              </motion.section>            
-              <motion.div 
-                className="grid grid-cols-1 md:grid-cols-2 gap-10 px-10 pb-20 max-w-5xl mx-auto"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 1.5, duration: 1 }}
-              >
-                {sections.map((section) => (
-                  <motion.a
-                    key={section.title}
-                    href={section.link}
-                    className="group relative rounded-2xl overflow-hidden shadow-xl border border-[#b0a080]/40 transition-transform hover:scale-105"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.98 }}
-                  >
-                    {/* Image Section */}
-                    <div
-                      className="w-full h-64 bg-cover bg-center"
-                      style={{ backgroundImage: `url(${section.image})` }}
-                    />
-                    
-                    {/* Frosted Glass Card with Text Below the Image */}
-                    <div className="relative z-10">
-                      <div className="bg-[#FFFFFF]/40 backdrop-blur-md rounded-lg p-6">
-                        <h2 className="text-2xl font-bold mb-2 text-[#454321]">{section.title}</h2>
-                        <p className="text-md font-medium text-[#452222]">{section.description}</p>
-                      </div>
+            </motion.section>            
+            <motion.div 
+              className="grid grid-cols-1 md:grid-cols-2 gap-10 px-10 pb-20 max-w-5xl mx-auto"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1.5, duration: 1 }}
+            >
+              {sections.map((section) => (
+                <motion.div
+                  key={section.title}
+                  className="group relative rounded-2xl overflow-hidden shadow-xl border border-[#b0a080]/40 transition-transform hover:scale-105"
+                >
+                  {/* Image Section */}
+                  <div
+                    className="w-full h-64 bg-cover bg-center"
+                    style={{ backgroundImage: `url(${section.image})` }}
+                  />
+                  
+                  {/* Frosted Glass Card with Text Below the Image */}
+                  <div className="relative z-10">
+                    <div className="bg-[#FFFFFF]/40 backdrop-blur-md rounded-lg p-6">
+                      <h2 className="text-2xl font-bold mb-2 text-[#454321]">{section.title}</h2>
+                      <p className="text-md font-medium text-[#452222]">{section.description}</p>
                     </div>
-                  </motion.a>
-                ))}
-              </motion.div>
-              {/* Footer */}
-              <footer className="bg-blue-100/60  backdrop-blur-md border-t border-[#3e2e1f] py-4 sticky bottom-0 z-50">
-                <div className="max-w-6xl mx-auto flex justify-between items-center">
-                  <p className="text-sm font-medium text-[#3e2e1f] opacity-90">© 2025 Pratyush Vempati. All rights reserved.</p>
-                  <div className="space-x-6">
-                    <a href="/about" className="text-lg font-bold text-[#3e2e1f] hover:text-[#b25e28] transition-colors">About</a>
-                    <a href="/contact" className="text-lg font-bold text-[#3e2e1f] hover:text-[#b25e28] transition-colors">Contact</a>
-                    <a href="https://github.com/pratsvemp" target="_blank" rel="noopener noreferrer" className="text-lg font-bold text-[#3e2e1f] hover:text-[#b25e28] transition-colors">GitHub</a>
                   </div>
+                </motion.div>
+              ))}
+            </motion.div>
+            {/* Footer */}
+            <footer className="bg-blue-100/60  backdrop-blur-md border-t border-[#3e2e1f] py-4 sticky bottom-0 z-50">
+              <div className="max-w-6xl mx-auto flex justify-between items-center">
+                <p className="text-sm font-medium text-[#3e2e1f] opacity-90">© 2025 Pratyush Vempati. All rights reserved.</p>
+                <div className="space-x-6">
+                  <Link to="/about" className="text-lg font-bold text-[#3e2e1f] hover:text-[#b25e28] transition-colors">About</Link>
+                  <Link to="/contact" className="text-lg font-bold text-[#3e2e1f] hover:text-[#b25e28] transition-colors">Contact</Link>
+                  <a href="https://github.com/pratsvemp" target="_blank" rel="noopener noreferrer" className="text-lg font-bold text-[#3e2e1f] hover:text-[#b25e28] transition-colors">GitHub</a>
                 </div>
-              </footer>
-          </motion.div>
-        )}
-      </div>
+              </div>
+            </footer>
+        </motion.div>
+      )}
     </AnimatePresence>
   );
 }
