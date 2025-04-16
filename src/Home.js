@@ -15,6 +15,9 @@ const importAll = (r) => r.keys().map(r);
 const galleryImages = importAll(require.context('./gallery', false, /\.(png|jpe?g|svg)$/));
 
 export default function Home() {
+  useEffect(() => {
+    document.title = "Home | Pratyush Vempati";
+  }, []);
   const fadeIn = {
     hidden: { opacity: 0 },
     visible: { opacity: 1, transition: { duration: 1 } },

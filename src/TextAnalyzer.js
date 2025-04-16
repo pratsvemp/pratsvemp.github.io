@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router";
 import { motion } from "framer-motion";
 import bgPic from "./activ/bgpic.jpg";
@@ -10,6 +10,9 @@ const prepositions = [
 const articles = ["a", "an"];
 
 export default function TextAnalyzer() {
+  useEffect(() => {
+    document.title = "Text Analyzer | Pratyush Vempati";
+  }, []);
   const [text, setText] = useState("");
   const [analysis, setAnalysis] = useState(null);
 

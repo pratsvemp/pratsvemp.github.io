@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router";
 import { motion } from "framer-motion";
 import bgPic from "./components/bgpic.jpg";
@@ -39,6 +39,9 @@ const timelineItems = [
 const pages = ["Home", "About", "Activities", "Art", "Contact"];
 
 export default function About() {
+  useEffect(() => {
+    document.title = "About | Pratyush Vempati";
+  }, []);
   return (
     <div className="bg-[#FDF6E3] text-[#654321] min-h-screen font-sans relative overflow-hidden">
       {/* Background */}

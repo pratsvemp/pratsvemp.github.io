@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import bgPic from "./bgpic.jpg";
 
 export default function Contact() {
+  useEffect(() => {
+    document.title = "Contact | Pratyush Vempati";
+  }, []);
   const fadeIn = {
     hidden: { opacity: 0 },
     visible: { opacity: 1, transition: { duration: 1.2 } },

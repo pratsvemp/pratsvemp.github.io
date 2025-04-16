@@ -1,11 +1,14 @@
 // Research.jsx, Projects.jsx, Others.jsx
 
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router";
 import { motion } from "framer-motion";
 import bgPic from "./activ/bgpic.jpg";
 
 export default function PlaceholderPage() {
+  useEffect(() => {
+    document.title = "Others | Pratyush Vempati";
+  }, []);
   return (
     <div className="bg-[#FDF6E3] text-[#654321] min-h-screen font-sans relative overflow-hidden flex flex-col">
       {/* Background */}
