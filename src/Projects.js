@@ -1,11 +1,9 @@
-// Research.jsx, Projects.jsx, Others.jsx
-
 import React from "react";
 import { Link } from "react-router";
 import { motion } from "framer-motion";
 import bgPic from "./activ/bgpic.jpg";
 
-export default function PlaceholderPage() {
+export default function Projects() {
   return (
     <div className="bg-[#FDF6E3] text-[#654321] min-h-screen font-sans relative overflow-hidden flex flex-col">
       {/* Background */}
@@ -24,13 +22,28 @@ export default function PlaceholderPage() {
 
       {/* Main Content */}
       <motion.div
-        className="relative z-10 py-32 px-6 max-w-4xl mt-12 mx-auto flex-grow text-center"
+        className="relative z-10 mt-24 px-6 max-w-5xl mx-auto flex-grow"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.5 }}
       >
-        <h1 className="text-5xl font-bold mb-4">Work In Progress</h1>
-        <p className="text-xl font-medium">This section is currently being built. Stay tuned!</p>
+        <h1 className="text-5xl font-bold mb-10 text-center">Projects</h1>
+
+        {/* Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
+          {/* Text Analysis Tool Card */}
+          <Link
+            to="/text-analyzer"
+            className="block rounded-2xl p-6 border border-[#b0a080]/40 shadow-lg bg-white/50 backdrop-blur-md transition-transform hover:scale-105"
+          >
+            <h2 className="text-2xl font-bold mb-2 text-[#3e2e1f]">Text Analysis Tool</h2>
+            <p className="text-md text-[#4a3321]">
+              Analyze large text input for word and character stats, and token frequency of pronouns, prepositions, and articles.
+            </p>
+          </Link>
+
+          {/* Add more project cards here if needed */}
+        </div>
       </motion.div>
 
       {/* Footer */}
@@ -60,5 +73,3 @@ export default function PlaceholderPage() {
     </div>
   );
 }
-
-// You can copy this file as Research.jsx, Projects.jsx, and Others.jsx and import them separately into your router.

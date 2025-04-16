@@ -9,6 +9,7 @@ import Pro from './Projects';
 import Oth from './Others';
 import Art from './Art';
 import Con from './Contact';
+import Tex from './TextAnalyzer.js'
 import './index.css';
 
 function useGlobalTracking() {
@@ -79,6 +80,7 @@ function App() {
         <Route path="/activities/research" element={<Res />} />
         <Route path="/activities/projects" element={<Pro />} />
         <Route path="/activities/others" element={<Oth />} />
+        <Route path="/text-analyzer" element={<Tex />} />
       </Routes>
       </div>
     </Router>
