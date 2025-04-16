@@ -40,12 +40,12 @@ export default function PlaceholderPage() {
             © 2025 Pratyush Vempati. All rights reserved.
           </p>
           <div className="space-x-6">
-            <a href="/about" className="text-lg font-bold text-[#3e2e1f] hover:text-[#b25e28] transition-colors">
+            <Link to="/about" className="text-lg font-bold text-[#3e2e1f] hover:text-[#b25e28] transition-colors">
               About
-            </a>
-            <a href="/contact" className="text-lg font-bold text-[#3e2e1f] hover:text-[#b25e28] transition-colors">
+            </Link>
+            <Link to="/contact" className="text-lg font-bold text-[#3e2e1f] hover:text-[#b25e28] transition-colors">
               Contact
-            </a>
+            </Link>
             <a
               href="https://github.com/pratsvemp"
               target="_blank"

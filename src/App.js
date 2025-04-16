@@ -44,13 +44,13 @@ function Navbar() {
   return (
     <nav className="fixed top-0 left-0 w-full bg-transparent backdrop-blur-sm border-b border-[#654321] p-4 z-50 mb-8">
       <div className="max-w-6xl mx-auto flex justify-between items-center">
-        <div className="text-2xl font-bold">Pratyush Vempati</div>
+        <div className="text-2xl text-[#454321] font-bold">Pratyush Vempati</div>
         <div className="space-x-6">
           {["Home", "About", "Activities", "Art", "Contact"].map((page) => (
             <Link
               key={page}
               to={`/${page.toLowerCase()}`}
-              className="text-lg font-bold text-[#654321] hover:text-[#D2691E] transition-colors"
+              className="text-lg font-bold text-[#454321] hover:text-[#D2691E] transition-colors"
             >
               {page}
             </Link>

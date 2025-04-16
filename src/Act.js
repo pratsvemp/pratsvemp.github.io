@@ -142,23 +142,25 @@ export default function Activities() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {activityPages.map((activity, index) => (
-            <motion.a
-              key={index}
-              href={activity.link}
-              className="group relative rounded-2xl overflow-hidden shadow-xl border border-[#b0a080]/40 backdrop-blur-md bg-white/40 transition-transform hover:scale-105"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              <div
-                className="absolute inset-0 bg-cover bg-center"
-                style={{ backgroundImage: `url(${activity.image})` }}
-              />
-              <div className="absolute inset-0 bg-[#FDF6E3]/60 group-hover:bg-[#FDF6E3]/70 transition duration-300" />
-              <div className="relative z-10 p-6 flex flex-col justify-end h-64">
-                <h2 className="text-2xl font-bold mb-2 text-[#654321]">{activity.title}</h2>
-                <p className="text-md font-medium text-[#554321]">{activity.description}</p>
-              </div>
-            </motion.a>
+            <Link to={activity.link}>
+              <motion.div
+                key={index}
+                href={activity.link}
+                className="group relative rounded-2xl overflow-hidden shadow-xl border border-[#b0a080]/40 backdrop-blur-md bg-white/40 transition-transform hover:scale-105"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                <div
+                  className="absolute inset-0 bg-cover bg-center"
+                  style={{ backgroundImage: `url(${activity.image})` }}
+                />
+                <div className="absolute inset-0 bg-[#FDF6E3]/60 group-hover:bg-[#FDF6E3]/70 transition duration-300" />
+                <div className="relative z-10 p-6 flex flex-col justify-end h-64">
+                  <h2 className="text-2xl font-bold mb-2 text-[#654321]">{activity.title}</h2>
+                  <p className="text-md font-medium text-[#000321]">{activity.description}</p>
+                </div>
+              </motion.div>
+            </Link>
           ))}
         </div>
       </motion.div>
@@ -170,12 +172,12 @@ export default function Activities() {
             © 2025 Pratyush Vempati. All rights reserved.
           </p>
           <div className="space-x-6">
-            <a href="/about" className="text-lg font-bold text-[#3e2e1f] hover:text-[#b25e28] transition-colors">
+            <Link to="/about" className="text-lg font-bold text-[#3e2e1f] hover:text-[#b25e28] transition-colors">
               About
-            </a>
-            <a href="/contact" className="text-lg font-bold text-[#3e2e1f] hover:text-[#b25e28] transition-colors">
+            </Link>
+            <Link to="/contact" className="text-lg font-bold text-[#3e2e1f] hover:text-[#b25e28] transition-colors">
               Contact
-            </a>
+            </Link>
             <a
               href="https://github.com/pratsvemp"
               target="_blank"

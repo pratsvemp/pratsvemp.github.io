@@ -116,10 +116,10 @@ export default function Art() {
         transition={{ duration: 1.5 }}
       >
         <h2 className="text-3xl font-bold text-center mb-4">Photos and 3D</h2>
-        <p className="text-lg text-center max-w-3xl mx-auto mb-3">
-              I like clicking photos, be it with a camera in real life or a camera in Blender. All images are subject to Creative Commons Licensing (CC BY 4.0). I have tried my best to credit any and all artists whose work I have used/referenced while making any scenes (under appropriate licensing). The best way to resolve any disputes is to <a href="/contact" className="text-[#AA0000]">contact me</a>
+        <p className="text-lg test-[#0000321] text-center max-w-3xl mx-auto mb-3">
+              I like clicking photos, be it with a camera in real life or a camera in Blender. All images are subject to Creative Commons Licensing (CC BY 4.0). I have tried my best to credit any and all artists whose work I have used/referenced while making any scenes (under appropriate licensing). The best way to resolve any disputes is to <a href="/contact" className="text-[#AA0000]">contact me</a>.
         </p>
-        <p className="text-lg text-center max-w-3xl mx-auto mb-6">
+        <p className="text-lg text-center test-[#0000321] max-w-3xl mx-auto mb-6">
               I mainly use Snapseed to edit photos, Blender (and sometimes Houdini) to make Blender scenes, GIMP to edit photos and Resolve to edit videos.
         </p>
 

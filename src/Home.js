@@ -22,7 +22,7 @@ export default function Home() {
 
   const sections = [
     { title: "My Art", description: "My photographs and 3D art.", link: "/art", image: artImg },
-    { title: "My Activities", description: "Things done and doing.", link: "/activities", image: achievementsImg },
+    { title: "My Activities", description: "Things done with and things I'm doing.", link: "/activities", image: achievementsImg },
     { title: "About Me", description: "More about me if you're creepy.", link: "/about", image: aboutMeImg },
     { title: "Contact me", description: "Anything under the sun.", link: "/contact", image: contactImg },
   ];
@@ -96,7 +96,7 @@ export default function Home() {
               <div className="max-w-4xl w-full grid grid-cols-1 md:grid-cols-2 items-center gap-8">
                 <div>
                   <h1 className="text-5xl font-bold mb-4">Hi, I'm Pratyush</h1>
-                  <p className="text-lg">I'm currently an Undergraduate student of Computer Science at the International Institute of Information Technology, Hyderabad, pursuing a Bachelor's in Technology of Computer Science, while also studying pure mathematics on the side. <br /><br /> My main interests are in Graph Theory, specifically graph reconstruction, and Complexity Theory. <br /><br />On the side, I play badminton, take some aesthetic photos and make ethereal 3D art. Check out more of me below! <br /><br /> All photos and images on this website including the backgrounds are my own. </p>
+                  <p className="text-lg text-[#000321]">I'm currently an Undergraduate student of Computer Science at the International Institute of Information Technology, Hyderabad, pursuing a Bachelor's in Technology of Computer Science, while also studying pure mathematics on the side. <br /><br /> My main interests are in Graph Theory, specifically graph reconstruction, and Complexity Theory. <br /><br />On the side, I play badminton, take some aesthetic photos and make ethereal 3D art. Check out more of me below! <br /><br /> All photos and images on this website including the backgrounds are my own. </p>
                 </div>
                 <motion.img 
                   src={profileImg} 
@@ -128,16 +128,16 @@ export default function Home() {
                   />
                   
                   {/* Frosted Glass Card with Text Below the Image */}
-                  <div className="relative z-10">
-                    <div className="bg-[#FFFFFF]/40 backdrop-blur-md rounded-lg p-6">
-                      <h2 className="text-2xl font-bold mb-2 text-[#454321]">{section.title}</h2>
-                      <p className="text-md font-medium text-[#452222]">{section.description}</p>
-                    </div>
+                  <div className="bg-[#FFFFFF]/40 backdrop-blur-md rounded-lg p-6">
+                    <h2 className="text-2xl font-bold mb-2 text-[#454321]">{section.title}</h2>
+                    <p className="text-md font-medium text-[#454321] mb-3">{section.description}</p>
+                    <Link to={section.link} className="text-[#664321] font-semibold underline hover:text-[#8f471a] transition-colors">
+                      → Go to {section.title}
+                    </Link>
                   </div>
                 </motion.div>
               ))}
             </motion.div>
-
             {/* Footer */}
             <footer className="bg-blue-100/60 backdrop-blur-md border-t border-[#3e2e1f] py-4 sticky bottom-0 z-50">
               <div className="max-w-6xl mx-auto flex justify-between items-center">
