@@ -43,7 +43,7 @@ const About = () => (
         <div className="about-photo">
           <img src="/profile.jpg" alt="Pratyush Vempati" />
           <figcaption style={{ textAlign: 'center', fontSize: '0.85rem', color: 'var(--text-muted)', marginTop: '8px' }}>
-            Obligatory outdoorsy picture. Picture taken by <a href="https://sites.google.com/view/amik-raj-behera/home" target="_blank" rel="noopener noreferrer">Amik Raj Behera</a> (who does wonderful research, do check him out!), in Lisbon, Portugal, while (ironically) attending CCC 2026.
+            Obligatory outdoorsy picture, taken by <a href="https://sites.google.com/view/amik-raj-behera/home" target="_blank" rel="noopener noreferrer">Amik Raj Behera</a> (who does wonderful research, do check him out!), in Lisbon, Portugal, while (ironically) attending CCC 2026.
           </figcaption>
         </div>
 
