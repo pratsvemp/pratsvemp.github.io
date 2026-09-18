@@ -27,12 +27,14 @@ const Research = () => (
           <li key={paper.id} className="paper-item" id={paper.id}>
             <p className="paper-title">{paper.title}</p>
             <p className="paper-meta">{paper.authors} &mdash; {paper.venue}</p>
-            <p className="paper-abstract">{paper.abstract}</p>
             <div className="paper-links">
               {paper.links.map(link => (
                 <a key={link.label} href={link.href}>[{link.label}]</a>
               ))}
             </div>
+            <p></p>
+            <h3>Abstract</h3>
+            <p className="paper-abstract">{paper.abstract}</p>
           </li>
         ))}
       </ul>
